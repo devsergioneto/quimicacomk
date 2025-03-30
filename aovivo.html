@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula ao Vivo - Interativa</title>
+    <link rel="stylesheet" href="aovivo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> </head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">Química com K</h1>
+            <div class="user-info">
+                <span class="username">Usuário Logado</span>
+                <button class="logout-btn">Sair</button>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <section class="video-section">
+                <!-- <div class="video-player-container">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play"></i> <span>Vídeo ao Vivo</span>
+                    </div>
+                </div> -->
+                <!-- <iframe class="video-player-container" frameborder="0" src="http://www.youtube.com/watch?v=uMZEye0U2G8" allowfullscreen></iframe> -->
+                <iframe class="video-player-container" src="https://www.youtube.com/embed/uMZEye0U2G8?si=p6tbrgmPzrYgXmxL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="controls">
+                    <button class="control-button"><i class="fas fa-play"></i></button>
+                    <button class="control-button"><i class="fas fa-pause"></i></button>
+                    <button class="control-button"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <div class="chat-section">
+                    <div class="chat-header">
+                        <h2>Chat ao Vivo</h2>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message received">
+                            <span class="sender">Professor:</span> Olá a todos! Sejam bem-vindos!
+                        </div>
+                        <div class="message sent">
+                            <span class="sender">Você:</span> Olá!
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+                        <button id="send-button"><i class="fas fa-paper-plane"></i> Enviar</button>
+                    </div>
+                </div>
+
+                <div class="interaction-section">
+                    <div class="interaction-header">
+                        <h2>Interação</h2>
+                    </div>
+                    <div class="interaction-options">
+                        <button class="interaction-button">Perguntas</button>
+                        <button class="interaction-button">Enquetes</button>
+                        <button class="interaction-button">Materiais</button>
+                        </div>
+                    <div class="interaction-content" id="interaction-content">
+                        <p>Selecione uma opção acima para interagir.</p>
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Nome da Instituição. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="aovivo.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição química com K</title>
+    <link rel="stylesheet" href="inscricao.css">
+</head>
+<body>
+    <section id="inscricao" class="inscricao-secao">
+        <div class="inscricao-container">
+            <h2>Inscreva-se na Química com K</h2>
+            <p class="inscricao-descricao">Preencha o formulário abaixo para garantir sua vaga!</p>
+
+            <form id="inscricaoForm">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    <div class="form-group">
+                        <label for="nomeCompleto">Nome Completo:</label>
+                        <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInscricao">Email:</label>
+                        <input type="email" id="emailInscricao" name="emailInscricao" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefoneInscricao">Telefone:</label>
+                        <input type="tel" id="telefoneInscricao" name="telefoneInscricao" required>
+                        <span class="error-message"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações de Pagamento</legend>
+                    <div class="form-group">
+                        <label for="metodoPagamento">Método de Pagamento:</label>
+                        <select id="metodoPagamento" name="metodoPagamento" required>
+                            <option value="">Selecione o método</option>
+                            <option value="cartaoCredito">Cartão de Crédito</option>
+                            <option value="boleto">Boleto Bancário</option>
+                            <option value="pix">Pix</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div id="cartaoCreditoCampos" style="display: none;">
+                        <div class="form-group">
+                            <label for="numeroCartao">Número do Cartão:</label>
+                            <input type="text" id="numeroCartao" name="numeroCartao" placeholder="XXXX XXXX XXXX XXXX">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="nomeTitular">Nome do Titular:</label>
+                            <input type="text" id="nomeTitular" name="nomeTitular">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataExpiracao">Data de Expiração (MM/AA):</label>
+                            <input type="text" id="dataExpiracao" name="dataExpiracao" placeholder="MM/AA">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="XXX">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="submit" class="submit-button">Finalizar Inscrição</button>
+                    <button type="button" class="login-button" onclick="window.location.href='login.html'">Logar</button>
+                </div>
+                <div id="inscricaoFeedback" class="feedback"></div>
+            </form>
+        </div>
+    </section>
+    <script src="inscricao.js"></script>
+</body>
+</html>

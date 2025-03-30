@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #007bff;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --error-color: #dc3545;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.inscricao-secao {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-top: 1px solid #eee;
+    width: 100%;
+    max-width: 600px;
+}
+
+.inscricao-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+.inscricao-secao h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.inscricao-descricao {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.inscricao-secao fieldset {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.inscricao-secao legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.inscricao-secao .form-group {
+    margin-bottom: 20px;
+}
+
+.inscricao-secao label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.inscricao-secao input,
+.inscricao-secao select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.inscricao-secao input:focus,
+.inscricao-secao select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.inscricao-secao .error-message {
+    color: var(--error-color);
+    font-size: 0.8em;
+    display: block;
+    margin-top: 5px;
+}
+
+.inscricao-secao .form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: space-between; /* Distribui os botões horizontalmente */
+}
+
+.inscricao-secao .submit-button,
+.inscricao-secao .login-button {
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    flex-grow: 1; /* Faz os botões crescerem igualmente */
+    text-align: center;
+    text-decoration: none; /* Remove sublinhado dos links se usar <a> */
+}
+
+.inscricao-secao .submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.inscricao-secao .submit-button:hover {
+    background-color: #0056b3;
+}
+
+.inscricao-secao .login-button {
+    background-color: #f9f9f9;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.inscricao-secao .login-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.inscricao-secao .feedback {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilos específicos para os campos de cartão de crédito */
+#cartaoCreditoCampos .form-group {
+    margin-bottom: 15px;
+}
+
+.inscricao-secao input.error,
+.inscricao-secao select.error {
+    border-color: var(--error-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .inscricao-secao {
+        padding: 30px 15px;
+    }
+    .inscricao-container {
+        padding: 20px;
+    }
+
+    .inscricao-secao .form-buttons {
+        flex-direction: column; /* Empilha os botões em telas menores */
+        gap: 10px;
+    }
+
+    .inscricao-secao .submit-button,
+    .inscricao-secao .login-button {
+        width: 100%; /* Faz os botões ocuparem a largura total em telas menores */
+    }
+}

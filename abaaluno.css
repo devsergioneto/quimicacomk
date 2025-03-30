@@ -1,0 +1,273 @@
+/* aluno02.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.sidebar {
+    background-color: #fff;
+    width: 280px;
+    padding: 25px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-details h3 {
+    margin: 0 0 5px;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+.user-details p.user-id {
+    margin: 0;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li {
+    padding: 12px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav ul li:hover,
+.main-nav ul li.active {
+    background-color: #e0f2f7;
+}
+
+.main-nav ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #34495e;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a i {
+    margin-right: 15px;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li.active a {
+    color: #007bff;
+}
+
+.quick-links {
+    margin-top: auto; /* Empurra para o final da sidebar */
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.quick-links-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #777;
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links ul li {
+    padding: 8px 20px;
+}
+
+.quick-links ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.95em;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #f4f7f6;
+}
+
+.main-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.main-header h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #34495e;
+}
+
+.content {
+    display: none;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.content.active {
+    display: block;
+}
+
+.dashboard-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.widget {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #007bff;
+}
+
+.widget h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget ul li {
+    margin-bottom: 10px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.widget ul li i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.widget ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.widget progress {
+    margin-left: 10px;
+}
+
+.calendar-overview {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-overview h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+.calendar-overview iframe {
+    border: none;
+    width: 100%;
+}
+
+.content button {
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.content button:hover {
+    background-color: #c82333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+    }
+    .sidebar-header {
+        margin-bottom: 20px;
+    }
+    .logo {
+        width: 120px;
+        margin-bottom: 15px;
+    }
+    .user-info {
+        margin-bottom: 20px;
+    }
+    .main-nav ul li {
+        padding: 10px 15px;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    .dashboard-widgets {
+        grid-template-columns: 1fr;
+    }
+}

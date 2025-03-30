@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Aluno</title>
+    <link rel="stylesheet" href="abaaluno.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="logo.png" alt="Logo da Instituição" class="logo">
+            </div>
+            <div class="user-info">
+                <!-- <img src="profile.jpg" alt="Foto do Perfil" class="user-avatar"> -->
+                <i class="fa-solid fa-circle-user" style="color: #177cea;"></i>
+                <div class="user-details">
+                    <h3>Olá, [Nome do Aluno]</h3>
+                    <p class="user-id">Matrícula: [Número da Matrícula]</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" data-page="dashboard" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#" data-page="cursos"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="#" data-page="tarefas"><i class="fas fa-tasks"></i> Tarefas</a></li>
+                    <li><a href="#" data-page="notas"><i class="fas fa-graduation-cap"></i> Notas</a></li>
+                    <li><a href="#" data-page="horario"><i class="far fa-calendar-alt"></i> Horário</a></li>
+                    <li><a href="#" data-page="mensagens"><i class="far fa-envelope"></i> Mensagens</a></li>
+                    <li><a href="#" data-page="perfil"><i class="fas fa-user-cog"></i> Perfil</a></li>
+                    <li><a href="#" data-page="sair"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                </ul>
+            </nav>
+            <div class="quick-links">
+                <h4 class="quick-links-title">Acesso Rápido</h4>
+                <ul>
+                    <li><a href="#">Biblioteca Online</a></li>
+                    <li><a href="#">Portal do Aluno</a></li>
+                    <li><a href="#">Suporte Técnico</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h2 id="page-title">Dashboard</h2>
+            </header>
+
+            <section id="dashboard-content" class="content active">
+                <div class="dashboard-widgets">
+                    <div class="widget upcoming-assignments">
+                        <h3>Próximas Tarefas</h3>
+                        <ul>
+                            <li><i class="far fa-calendar-check"></i> Entrega de Projeto de [Disciplina] - 05/04/2025</li>
+                            <li><i class="far fa-calendar-check"></i> Questionário de [Outra Disciplina] - 07/04/2025</li>
+                            <li><a href="#">Ver todas as tarefas</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="widget recent-announcements">
+                        <h3>Anúncios Recentes</h3>
+                        <ul>
+                            <li><i class="fas fa-bullhorn"></i> Aviso sobre o feriado acadêmico.</li>
+                            <li><i class="fas fa-bullhorn"></i> Mudança na sala da aula de [Disciplina].</li>
+                            <li><a href="#">Ver todos os anúncios</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="widget course-progress">
+                        <h3>Progresso nos Cursos</h3>
+                        <ul>
+                            <li>[Disciplina 1]: <progress value="75" max="100">75%</progress> 75%</li>
+                            <li>[Disciplina 2]: <progress value="50" max="100">50%</progress> 50%</li>
+                            <li>[Disciplina 3]: <progress value="90" max="100">90%</progress> 90%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="widget calendar-overview">
+                    <h3>Visão Geral do Horário</h3>
+                    <iframe src="https://calendar.google.com/calendar/embed?src=SEU_EMAIL_AQUI&ctz=America/Sao_Paulo" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </section>
+
+            <section id="cursos-content" class="content">
+                <h2>Cursos</h2>
+                <div class="courses-list">
+                    <div class="course-item">
+                        <div class="course-info">
+                            <h3>Nome do Curso 1</h3>
+                            <p>Professor: Nome do Professor</p>
+                        </div>
+                        <div class="course-actions">
+                            <a href="#detalhes-curso-1">Ver detalhes</a>
+                            <a href="#">Participar do fórum</a>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-info">
+                            <h3>Nome do Curso 2</h3>
+                            <p>Professor: Outro Professor</p>
+                        </div>
+                        <div class="course-actions">
+                            <a href="#detalhes-curso-2">Ver detalhes</a>
+                            <a href="#">Participar do fórum</a>
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="course-details-section" id="detalhes-curso-1">
+                    <h3>Detalhes do Curso 1</h3>
+                    <div class="course-content-tabs">
+                        <button class="tab-button active" data-tab="aulas-gravadas-1">Aulas Gravadas</button>
+                        <button class="tab-button" data-tab="aulas-ao-vivo-1">Aulas ao Vivo</button>
+                    </div>
+                    <div class="tab-content active" id="aulas-gravadas-1">
+                        <h4>Aulas Gravadas</h4>
+                        <ul class="video-list">
+                            <li><a href="#">Aula 1: Introdução ao Curso</a></li>
+                            <li><a href="#">Aula 2: Conceitos Fundamentais</a></li>
+                            <li><a href="#">Aula 3: Aplicações Práticas</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="aulas-ao-vivo-1">
+                        <h4>Aulas ao Vivo</h4>
+                        <p>Próxima aula ao vivo: 10 de Abril de 2025 às 16:00</p>
+                        <a href="#">Entrar na aula ao vivo</a>
+                    </div>
+                </div>
+
+                <div class="course-details-section" id="detalhes-curso-2">
+                    <h3>Detalhes do Curso 2</h3>
+                    <div class="course-content-tabs">
+                        <button class="tab-button active" data-tab="aulas-gravadas-2">Aulas Gravadas</button>
+                        <button class="tab-button" data-tab="aulas-ao-vivo-2">Aulas ao Vivo</button>
+                    </div>
+                    <div class="tab-content active" id="aulas-gravadas-2">
+                        <h4>Aulas Gravadas</h4>
+                        <ul class="video-list">
+                            <li><a href="#">Aula 1: Introdução ao Curso 2</a></li>
+                            <li><a href="#">Aula 2: Tópicos Avançados</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="aulas-ao-vivo-2">
+                        <h4>Aulas ao Vivo</h4>
+                        <p>Sem aulas ao vivo agendadas no momento.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tarefas-content" class="content">
+                <h2>Tarefas</h2>
+                <div class="task-list">
+                    <div class="task-item overdue">
+                        <div class="task-details">
+                            <h3>Título da Tarefa 1</h3>
+                            <p>Disciplina: Nome da Disciplina</p>
+                            <p>Prazo: 04/04/2025</p>
+                        </div>
+                        <div class="task-actions">
+                            <button class="mark-done"><i class="fas fa-check"></i> Marcar como Concluída</button>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+
+            <section id="notas-content" class="content">
+                <h2>Notas</h2>
+                <div class="grades-summary">
+                    </div>
+                <div class="grades-details">
+                    </div>
+            </section>
+
+            <section id="horario-content" class="content">
+                <h2>Horário</h2>
+                <div class="schedule-view">
+                    </div>
+            </section>
+
+            <section id="mensagens-content" class="content">
+                <h2>Mensagens</h2>
+                <div class="message-list">
+                    </div>
+                <div class="message-compose">
+                    </div>
+            </section>
+
+            <section id="perfil-content" class="content">
+                <h2>Perfil</h2>
+                <div class="profile-info">
+                    </div>
+            </section>
+
+            <section id="sair-content" class="content">
+                <h2>Sair</h2>
+                <p>Deseja realmente sair do sistema?</p>
+                <button id="logout-button">Confirmar Saída</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="abaaluno.js"></script>
+</body>
+</html>
